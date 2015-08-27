@@ -147,10 +147,17 @@ def ledHandler():
 	global Storedbitvalue
 	global Displayedbitvalue
 	
-	print "Cur: ", str(Currentbitvalue)
-	print "Stor: ", str(Storedbitvalue)
-	print "Disp: ", str(Displayedbitvalue)
+	if Currentbitvalue != 0:
+		Displayedbitvalue = Currentbitvalue
+		print "Cur: ", str(Currentbitvalue)
+		print "Stor: ", str(Storedbitvalue)
+		print "Disp: ", str(Displayedbitvalue)
 	
+	else:
+		print "Cur: ", str(Currentbitvalue)
+		print "Stor: ", str(Storedbitvalue)
+		print "Disp: ", str(Displayedbitvalue)
+
 def keyboardCleanup():
 	
 	GPIO.output(LedPin_0, GPIO.LOW)
